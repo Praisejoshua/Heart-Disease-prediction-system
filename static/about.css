@@ -1,0 +1,40 @@
+    body{
+    background-image: url("../static/background\ image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color:black;
+
+    
+
+}
+
+.div_1{
+    display: flex;
+    gap: 30rem;
+    margin: 5rem 10rem 0 10rem;
+
+}
+
+.p_2{
+    margin: 0 40rem 0 3rem ;
+}
+.my{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+html ::-webkit-scrollbar{
+    width: 0.5rem;
+
+}
+
+html ::-webkit-scrollbar-track{
+    background-color: transparent;
+
+}
+
+html ::-webkit-scrollbar-thumb{
+    color: black;
+    border-radius: 5rem;
+}

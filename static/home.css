@@ -1,0 +1,63 @@
+body{
+    background-image: url("../static/background\ image\ 5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    
+}
+html{
+    /* font-family: arial; */
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.heading{
+  /* background-color: rgba(134, 198, 209, 0.644); */
+  color: rgb(0, 0, 0);
+  margin-right: 47rem;
+  margin-left: 6rem;
+  margin-top: 4rem;
+  padding: 7rem;
+}
+
+.head1{
+    width: 12rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+button{
+    padding: 1rem;
+    /* text-align: center; */
+    font-weight: bold;
+}
+.first_div{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+input[type=number]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+input[type=number]:focus{
+    background-color: rgb(215, 243, 250);
+    color: white;
+}
+html ::-webkit-scrollbar{
+    width: 0.5rem;
+
+}
+
+html ::-webkit-scrollbar-track{
+    background-color: transparent;
+
+}
+
+html ::-webkit-scrollbar-thumb{
+    color: black;
+    border-radius: 5rem;
+}

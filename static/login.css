@@ -1,0 +1,65 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Poppins:ital,wght@0,400;1,400;1,500&family=Roboto:wght@100&display=swap'); */
+
+html{
+    font-family: 'poppins',Arial;
+}
+body{
+    background-image: url("../static/background\ image\ 32.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.div1{
+    background-color: #ffff;
+    opacity: 0.6;
+    margin: 8rem 10rem 30px 10rem;
+    padding: 3rem;
+    border-radius: 3rem;
+}
+.div2{
+    color: #000;
+    opacity: 5;
+}
+input[type=text]{
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+input[type=password]{
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+input[type=submit]{
+    border: 1px solid black;
+    padding: 1rem 5rem 1rem 5rem;  
+    background-color: rgb(0, 0, 0);
+    color: white; 
+    border-radius: 0.5rem;
+}
+input[type=submit]:hover{
+    background-color: white;
+    color:rgb(8, 8, 8);
+    border-radius: 0.5rem;
+
+}
+ul{
+    list-style: none;
+    text-decoration: none;
+}
+.link{
+    display: flex;
+    margin-left: 19rem;
+   
+}
+
+a{
+    font-size: large;
+    text-decoration: none;
+    color: rgb(2, 238, 202)
+    
+}

@@ -1,0 +1,96 @@
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='home.css')}}">
+
+{% extends "base.html" %}
+
+{% block title %}
+Home page
+{% endblock %}
+
+
+{% block content %}
+<div class="first_div">
+    <h1>HEART DISEASE FALIURE</h1>
+<form id="heart-form">
+
+    <label for="anaemia">Anaemia: </label>
+    <input type="number" name="anaemia" id="anaemia" required placeholder="0">
+    <br>
+    <br>
+    
+    <label for="creatinine_phosphokinase">Creatinine_phosphokinase: </label>
+    <input type="number" name="creatinine_phosphokinase" id="creatinine_phosphokinase" required placeholder="582">
+    <br>
+    <br>
+
+    <label for="diabetes">Diabetes: </label>
+    <input type="number" name="diabetes" id="diabetes" required placeholder="0">
+    <br>
+    <br>
+    <label for="ejection_fraction">Ejection_fraction: </label>
+    <input type="number" name="ejection_fraction" id="ejection_fraction" required placeholder="20">
+    <br>
+    <br>
+
+    <label for="high_blood_pressure">High_blood_pressure: </label>
+    <input type="number" name="high_blood_pressure" id="high_blood_pressure" required placeholder="1">
+    <br>
+    <br>
+
+    <label for="platelets">Platelets: </label>
+    <input type="number" name="platelets" id="platelets" required placeholder="265000">
+    <br>
+    <br>
+
+    <label for="serum_creatinine">Serum_creatinine: </label>
+    <input type="number" name="serum_creatinine" id="serum_creatinine" required placeholder="1.9">
+    <br>
+    <br>
+
+    <label for="serum_sodium">Serum_sodium: </label>
+    <input type="number" name="serum_sodium" id="serum_sodium" required placeholder="130">
+    <br>
+    <br>
+
+    <label for="sex">Sex: </label>
+    <input type="number" name="sex" id="sex" required placeholder="1">
+    <br>
+    <br>
+
+    <label for="smoking">Smoking: </label>
+    <input type="number" name="smoking" id="smoking" required placeholder="0">
+    <br>
+    <br>
+
+    <button type="button" onclick="predictAge()">Predict Age</button>
+</form>
+<p> Predicted age: <span id="predicted-age"></span></p>
+</div>
+<script>
+    function predictAge(){
+        var formData = {
+            'anaemia' : parseFloat(document.getElementById('anaemia').value),
+            'creatinine_phosphokinase' : parseFloat(document.getElementById('creatinine_phosphokinase').value),
+            'diabetes' : parseFloat(document.getElementById('diabetes').value),
+            'ejection_fraction' : parseFloat(document.getElementById('ejection_fraction').value),
+            'high_blood_pressure' : parseFloat(document.getElementById('high_blood_pressure').value),
+            'platelets' : parseFloat(document.getElementById('platelets').value),
+            'serum_creatinine' : parseFloat(document.getElementById('serum_creatinine').value),
+            'serum_sodium' : parseFloat(document.getElementById('serum_sodium').value),
+            'sex' : parseFloat(document.getElementById('sex').value),
+            'smoking' : parseFloat(document.getElementById('smoking').value)
+        };
+
+        fetch('/predict', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('predicted-age').textContent = data.predicted_age
+        });
+    }
+</script>
+{% endblock %}

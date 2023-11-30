@@ -1,0 +1,49 @@
+body{
+    /* background-image: url("../static/background\ image\ 32.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center; */
+    background-color:  rgb(215, 243, 250);
+}
+.main{
+    display: flex;
+    /* text-align: center; */
+    margin: 2rem 0 0 15rem;
+}
+.first{
+    background-color: black;
+    padding: 10rem;
+    color: white;
+
+}
+.second{
+    background-color: white;
+    padding: 10rem;
+    margin-top: 2px;
+    box-shadow: 10px 10px 5px rgb(45, 45, 45);
+}
+input[type=text]{
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+input[type=number]{
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+input[type=email]{
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+.submit{
+    padding: 0.5rem;
+    display: block;
+    margin-top: 5px;
+    border-radius: 2.5px;
+    background-color: rgb(215, 243, 250);
+}

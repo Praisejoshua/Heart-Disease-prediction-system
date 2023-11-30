@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="{{url_for('static',filename='register.css')}}">
+
+
+{% block title %}
+<!-- sign up page -->
+{% endblock %}
+
+{% block content %}
+<body>
+    <div class="div1">
+        <div class="div2">
+            <h1>Register</h1>
+            <!-- creating a method for the user to send request to server -->
+            <form method="POST" action="/register">
+                <label for="username"></label>
+                <input type="text" id="username" name="username" required placeholder="Username">
+                <br>
+                <br>
+                <label for="password"></label>
+                <input type="password" id="password" name="password" required placeholder="Password">
+                <br>
+                <br>
+                <input type="submit" value="Register">
+        </form>
+        <div class="link">
+            <p>Already have an account?</p>         
+                <ul>
+                <a href="{{url_for('login_page') }}">Log in</a>
+                </ul>
+        </div>
+        </div>
+    </div>
+
+</body>
+{% endblock %}

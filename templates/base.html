@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>
+    {% block title %} {% endblock %}
+</title>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+<link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <p class="logo2">HealthCare</p>
+        </div>
+        <nav>
+            <div class="main_nav">
+                <ul class="first_ul">
+                    <li>
+                        <a href="{{url_for('home_page') }}"> Home</a> 
+                    </li>
+                    <li><a href="{{url_for('about_page')}}">About</a></li>
+                    <li><a href="{{url_for('contact_page')}}">Contact</a></li>
+                </ul>
+                <div class="second_ul">
+                    <ul>
+                        <li> <a href="{{url_for('login_page') }}">Log in</a></li>
+                        <li> <a href="{{url_for('register_page') }}">Sign up</a></li>
+                    </ul>
+                </div>
+                </div>
+
+        </nav>
+    </div>
+    {% block content %} {% endblock %}
+</body>
+</html>
